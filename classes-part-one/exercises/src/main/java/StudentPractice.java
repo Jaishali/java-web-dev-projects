@@ -11,10 +11,10 @@ Student.Course myCourse = new Student.Course("java","yes",1);
         System.out.println(Student.Course.getInstructor());
         System.out.println(Student.Course.getEnrolledStudents());
 Student.Teacher MyTeacher = new Student.Teacher("Jaishali","Reddy","java",2023);
-        System.out.println(Student.Teacher.getFirstName);
-        System.out.println(Student.Teacher.getLastName);
-        System.out.println(Student.Teacher.getSubject);
-        System.out.println(Student.Teacher.getYearsTeaching);
+       // System.out.println(Student.Teacher.getFirstName);
+        //System.out.println(Student.Teacher.getLastName);
+        //System.out.println(Student.Teacher.getSubject);
+       // System.out.println(Student.Teacher.getYearsTeaching);
     }
 
 }
