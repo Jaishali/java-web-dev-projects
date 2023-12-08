@@ -38,11 +38,11 @@ public class Student {
     }
 
     public static class Teacher {
-        public static boolean getFirstName;
-        public static boolean getLastName;
+       public static boolean getFirstName;
+       public static boolean getLastName;
         public static boolean getSubject;
         public static boolean getYearsTeaching;
-        private String firstName;
+       private String firstName;
         private String lastName;
         private String subject;
         private double yearsTeaching;
