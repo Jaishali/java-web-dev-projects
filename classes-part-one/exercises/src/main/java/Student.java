@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Student {
         private String name;
         private int studentId;
@@ -7,9 +5,9 @@ public class Student {
         private  double gpa = 0.0;
 
     public static class Course {
-        private String topic;
-        private String instructor;
-        private int enrolledStudents;
+        private static String topic;
+        private static String instructor;
+        private static int enrolledStudents;
 
 
         public Course(String topic, String instructor,int enrolledStudents ){
@@ -28,25 +26,29 @@ public class Student {
             this.enrolledStudents = enrolledStudents;
         }
 
-        public String getTopic() {
+        public static String getTopic() {
             return topic;
         }
-        public String getInstructor() {
+        public static String getInstructor() {
             return instructor;
         }
-        public int getEnrolledStudents(){
+        public static int getEnrolledStudents(){
             return enrolledStudents;
         }
     }
 
     public static class Teacher {
+        public static boolean getFirstName;
+        public static boolean getLastName;
+        public static boolean getSubject;
+        public static boolean getYearsTeaching;
         private String firstName;
         private String lastName;
-        private int subject;
+        private String subject;
         private double yearsTeaching;
 
 
-        public Teacher(String firstName ,String lastName, int subject, double yearsTeaching){
+        public Teacher(String firstName , String lastName, String subject, double yearsTeaching){
             this.firstName = firstName;
             this.lastName = lastName;
             this.subject = subject;
@@ -59,7 +61,7 @@ public class Student {
         public void setLastName(String lastName) {
             this.lastName = lastName;
         }
-        public void setSubject(int subject) {
+        public void setSubject(String subject) {
             this.subject = subject;
         }
         public void setYearsTeaching(double yearsTeaching){
@@ -72,7 +74,7 @@ public class Student {
         public String getLastName() {
             return  lastName;
         }
-        public int getSubject() {
+        public String getSubject() {
             return subject;
         }
         public double getYearsTeaching() {
