@@ -27,6 +27,7 @@ public class HelloController {
                 "<option value = 'italian'>Italian</option>" +
                 "<option value = 'spanish'>Spanish</option>" +
                 "<option value = 'german'>German</option>" +
+                "<option value = 'kannada'>Kannada</option>"+
                 "</select>" +
                 "<input type = 'submit' value = 'Greet Me!' />" +
                 "</form>";
@@ -66,6 +67,9 @@ public class HelloController {
         }
         else if (l.equals("german")) {
             greeting = "Hallo";
+        }
+        else if (l.equals("kannada")){
+            greeting = "Namaskaara";
         }
 
         return greeting + " " + n;
