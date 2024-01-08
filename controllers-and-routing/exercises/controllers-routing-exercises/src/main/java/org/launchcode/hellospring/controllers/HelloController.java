@@ -69,7 +69,7 @@ public class HelloController {
             greeting = "Hallo";
         }
         else if (l.equals("kannada")){
-            greeting = "Namaskaara";
+            greeting = "Namasakaara";
         }
 
         return greeting + " " + n;
