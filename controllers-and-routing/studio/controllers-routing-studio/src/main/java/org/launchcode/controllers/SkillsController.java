@@ -20,12 +20,12 @@ public class SkillsController {
         return html;
     }
 
-    @GetMapping(value="form")
+    @GetMapping(value="results")
     @ResponseBody
     public String formSkills() {
         String html = "<form method='post'>" +
                 "Name:<br>" +
-                "<input type = 'text' name = 'name' />" +
+                "<input type = 'text' name = 'username' />" +
                 "<br>My favorite language:<br>" +
                 "<select name = 'firstChoice'>" +
                 "<option value = 'Java'>Java</option>" +
@@ -50,15 +50,24 @@ public class SkillsController {
         return html;
     }
 
-    @PostMapping(value="form")
+    @PostMapping(value="results")
     @ResponseBody
-    public String namePage(@RequestParam String name, @RequestParam String firstChoice, @RequestParam String secondChoice, @RequestParam String thirdChoice) {
-        String html = "<h1>" + name + "</h1>" +
-                "<ol>" +
-                "<li>" + firstChoice + "</li>" +
-                "<li>" + secondChoice + "</li>" +
-                "<li>" + thirdChoice + "</li>" +
-                "</ol>";
+    public String namePage(@RequestParam String username, @RequestParam String firstChoice, @RequestParam String secondChoice, @RequestParam String thirdChoice) {
+        String html = "<h1>" + username + "</h1>" +
+                "<table>" +
+                "<tr>"+
+                "<td>1.</td>"+
+                "<td>" + firstChoice + "</td>" +
+                "</tr>"+
+                "<tr>"+
+                "<td>2.</td>"+
+                "<td>" + secondChoice + "</td>" +
+                "</tr>"+
+                "<tr>" +
+                "<td>3.</td>"+
+                "<td>" + thirdChoice + "</td>" +
+                "</tr>"+
+                "</table>";
         return html;
     }
 }
